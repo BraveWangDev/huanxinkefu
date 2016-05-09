@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
+</head>
+<body>
+
+<!--如果您需要在某些APP中直接引用环信移动客服访客端web插件，可按照如下方式配置URL即可-->
+<!--tenantid:租户id		appkey:注册的appkey		to: 关联绑定的im号-->
+<!--地址参数：http://XXX/h5.html?tenantid=XXXX&appkey=XXXX#XXXX&to=XXXX-->
+<!--CONFIG DEMO-->
+<script>
+var getParameters = function ( key ) {var r = location.href.match(new RegExp('[?&]?'+key+'=[0-9a-zA-Z%#*._-]*[^&]', 'ig'));r = r && r[0] ? (r[0][0]=='?' || r[0][0]=='&' ? r[0].slice(1) : r[0]) : '';return decodeURIComponent(r.slice(key.length+1));}
+
+
+
+var easemobIM = { config: {} };
+
+////通过url自动获取////
+easemobIM.config.tenantId = getParameters('tenantid');//租户id
+easemobIM.config.to = getParameters('to');//必填, 指定关联对应的im号
+easemobIM.config.appKey = getParameters('appkey');//必填, appKey
+
+easemobIM.config.staticPath = './static';//引用static的路径
+easemobIM.config.minimum = true;//是否允许窗口最小化，如不允许则默认展开
+/*详细配置项见static/js/easemob.js
+...
+*/
+
+document.write("<script src='" + easemobIM.config.staticPath + "/js/easemob.js'><\/script>");
+</script>
+</body>
+</html>

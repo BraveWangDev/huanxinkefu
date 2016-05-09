@@ -1,0 +1,7 @@
+//环信客服测试页面
+http://wangzhen0818.eicp.net:21599/huanxin_kefu/
+
+//必填配置项
+easemobIM.config.tenantId = '';//租户id
+easemobIM.config.to = '';//必填, 指定关联对应的im号
+easemobIM.config.appKey = '';//必填, appKey

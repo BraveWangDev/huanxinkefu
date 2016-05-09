@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<!--<script>-->
+		<!--var _hmt = _hmt || [];-->
+		<!--(function() {-->
+			<!--var hm = document.createElement("script");-->
+			<!--hm.src = "//hm.baidu.com/hm.js?47c60343c77d93cd8c4758cdb23c4dce";-->
+			<!--var s = document.getElementsByTagName("script")[0];-->
+			<!--s.parentNode.insertBefore(hm, s);-->
+		<!--})();-->
+	<!--</script>-->
+</head>
+
+<body>
+
+<div align="left" style="margin: 100px">
+	<h1>客服测试页面</h1>
+	<h1>点击右下角按钮打开客服页面</h1>
+	<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F47c60343c77d93cd8c4758cdb23c4dce' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+
+	<a href="http://www.baidu.com" >测试事件</a>
+</div>
+
+<!-- 使用默认客服设置 -->
+<!--<script src='//kefu.easemob.com/webim/easemob.js?tenantId=16665&hide=false&sat=false' async='async'></script>-->
+
+<!-- 使用自定义客服设置 网页-->
+<script>
+
+		var easemobIM = { config: {} };
+		////必填////
+		easemobIM.config.tenantId = '';//租户id
+		easemobIM.config.to = '';//必填, 指定关联对应的im号
+		easemobIM.config.appKey = '';//必填, appKey
+
+		////非必填////
+		easemobIM.config.staticPath = './static';//引用static的路径
+		easemobIM.config.minimum = false;//是否允许窗口最小化，如不允许则默认展开
+
+		//访客信息
+		easemobIM.config.vistor={};
+		easemobIM.config.vistor.trueName = '测试用户1-trueName';
+		easemobIM.config.vistor.userNickname = '测试用户1-userNickname';
+		easemobIM.config.vistor.description = '测试用户1-description';
+
+		//设置商品信息
+		easemobIM.config.track={};
+		easemobIM.config.track.title="我正在看：";
+		easemobIM.config.track.price="¥: 235.00";
+		easemobIM.config.track.desc="女装小香风气质蕾丝假两件短袖";
+		easemobIM.config.track.img_url="http://yourdomain.com/img/a.jpg";
+		easemobIM.config.track.item_url="http://yourdomain.com/item/a.html";
+
+//		//获取用户信息
+//		requestUser(function(data){
+//			var innerSource = 1 ; //from query string
+//			var isTable = [null,'门特','OTC'];
+//			init(data.nickname,isTable[innerSource]);
+//		});
+//		console.log('easemobim.config.staticPath = ' + easemobim.config.staticPath);
+
+	document.write("<script src='" + easemobIM.config.staticPath + "/js/easemob.js'><\/script>");
+</script>
+
+</body>
+</html>

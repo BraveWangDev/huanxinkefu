@@ -1,0 +1,20 @@
+//		//OTC-DEV
+//		easemobIM.config.tenantId = '16665';//租户id
+//		easemobIM.config.to = 'otcIM';//必填, 指定关联对应的im号
+//		easemobIM.config.appKey = 'testdev#otcdev';//必填, appKey
+//		//OTC-正式
+//		easemobIM.config.tenantId = '17464';//租户id
+//		easemobIM.config.to = 'taslydyf';//必填, 指定关联对应的im号
+//		easemobIM.config.appKey = 'taslydyf#otc';//必填, appKey
+//		//门特 ： 和OTC在一个客服管理中的门特
+//		easemobIM.config.tenantId = '17464';//租户id
+//		easemobIM.config.to = 'taslydyf';//必填, 指定关联对应的im号
+//		easemobIM.config.appKey = 'taslydyf#mente';//必填, appKey
+//		//门特-DEV
+//		easemobIM.config.tenantId = '18559';//租户id
+//		easemobIM.config.to = 'menteIm';//必填, 指定关联对应的im号
+//		easemobIM.config.appKey = 'testdev#mentedev';//必填, appKey
+//		//门特-正式
+//		easemobIM.config.tenantId = '17607';//租户id
+//		easemobIM.config.to = 'taslydyf';//必填, 指定关联对应的im号
+//		easemobIM.config.appKey = 'taslydyf#mentekf';//必填, appKey

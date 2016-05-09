@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <style>body {background-color: #eaeaea}</style>
+</head>
+<body>
+<h1>Demo</h1>
+<p>默认使用体验关联</p>
+<button onclick='easemobIM()'>默认组</button>
+<br><br><br>
+<p>如需使用技能组功能，需使用当前appkey创建新关联,并将新关联的im号传入easemobIM(@param1:技能组名称, @param2:关联对应的im号)</p>
+<button onclick='easemobIM("技能组1", "skill1")'>技能组1</button>
+<br><br><br>
+<button onclick='easemobIM("技能组2", "skill2")'>技能组2</button>
+
+
+<!--CONFIG DEMO-->
+<script>
+var easemobIM = { config: {} };
+
+////必填////
+easemobIM.config.tenantId = '';//租户id
+easemobIM.config.to = '';//必填, 指定关联对应的im号
+easemobIM.config.appKey = '';//必填, appKey
+
+////非必填////
+easemobIM.config.staticPath = './static';//引用static的路径
+easemobIM.config.minimum = false;//是否允许窗口最小化，如不允许则默认展开
+/*详细配置项见static/js/easemob.js
+...
+*/
+
+
+document.write("<script src='" + easemobIM.config.staticPath + "/js/easemob.js'><\/script>");
+</script>
+</body>
+</html>
