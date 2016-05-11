@@ -37,13 +37,17 @@
 
 		var easemobIM = { config: {} };
 		////必填////
-		easemobIM.config.tenantId = '';//租户id
-		easemobIM.config.to = '';//必填, 指定关联对应的im号
-		easemobIM.config.appKey = '';//必填, appKey
+//		easemobIM.config.tenantId = '';//租户id
+//		easemobIM.config.to = '';//必填, 指定关联对应的im号
+//		easemobIM.config.appKey = '';//必填, appKey
 
 		////非必填////
 		easemobIM.config.staticPath = './static';//引用static的路径
 		easemobIM.config.minimum = false;//是否允许窗口最小化，如不允许则默认展开
+//		easemobIM.config.dragEnable = true;//是否允许拖拽
+		easemobIM.config.mobile = true;//是否做移动端适配(全屏)
+//		easemobIM.config.dialogWidth = '400px';//聊天窗口宽度,建议宽度不小于400px
+//		easemobIM.config.dialogHeight = '500px';//聊天窗口高度,建议高度不小于500px
 
 		//访客信息
 		easemobIM.config.vistor={};
@@ -65,7 +69,6 @@
 //			var isTable = [null,'门特','OTC'];
 //			init(data.nickname,isTable[innerSource]);
 //		});
-//		console.log('easemobim.config.staticPath = ' + easemobim.config.staticPath);
 
 	document.write("<script src='" + easemobIM.config.staticPath + "/js/easemob.js'><\/script>");
 </script>
